@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <link rel="stylesheet" href="../css/relatorio.css">
+</head>
+<body>
+    <h1>Relatório</h1>
+    <table id="tabela-pontos">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Tipo</th>
+                <th>Localização</th>
+                <th>Observações</th>
+                <th>Anexo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="lista-registros">
+            <!-- Os registros serão inseridos aqui -->
+        </tbody>
+    </table>    
+
+    <dialog id="modal-editar">
+        <h2>Editar Registro</h2>
+        <form method="dialog">
+            <label for="campo-data">Data:</label>
+            <input type="date" id="campo-data" required><br><br>
+    
+            <label for="campo-hora">Hora:</label>
+            <input type="time" id="campo-hora" required><br><br>
+    
+            <label for="campo-tipo">Tipo:</label>
+            <select id="campo-tipo" required>
+                <option value="entrada">Entrada</option>
+                <option value="intervalo">Intervalo</option>
+                <option value="volta-intervalo">Volta Intervalo</option>
+                <option value="saída">Saída</option>
+            </select><br><br>
+    
+            <!-- Adicionando o campo de Observações -->
+            <label for="campo-obs">Observações:</label>
+            <textarea id="campo-obs" rows="4" cols="50"></textarea><br><br>
+    
+            <button id="botao-salvar" type="button">Salvar</button>
+            <button id="botao-fechar" type="button">Cancelar</button>
+        </form>
+    </dialog>
+    
+
+    <script src="../js/relatorio.js"></script>
+</body>
+</html>
