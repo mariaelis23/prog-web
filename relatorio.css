@@ -1,0 +1,104 @@
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#lista-registros {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#lista-registros h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#lista-registros div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#lista-registros p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    font-size: 1em;
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+button[onclick*="Excluir"] {
+    background-color: #e74c3c;
+}
+
+dialog#modal-editar {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+dialog#modal-editar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#botao-salvar {
+    background-color: #2ecc71;
+}
+
+#botao-fechar {
+    background-color: #e74c3c;
+}
+
+#botao-salvar, #botao-fechar {
+    width: 48%;
+    padding: 8px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 1%;
+}
+
+#botao-salvar:hover, #botao-fechar:hover {
+    opacity: 0.9;
+}
