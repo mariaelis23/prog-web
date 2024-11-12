@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sistema de Controle de Ponto</title>
+</head>
+<body>
+    <div class="data-hora">
+        <p id="dia-semana">Segunda-feira</p>
+        <p id="dia-mes-ano">26/08/2024</p>
+        <p id="hora-min-seg">08:33:45</p>
+    </div>
+    <div id="pop-up" class="not-visible">
+        <p>O ponto foi registrado com sucesso</p>
+        <button id="btn-close-pop-up">X</button>
+    </div>
+    <div id="div-bater-ponto">
+        <button id="btn-bater-ponto">Bater ponto</button>
+    </div>
+    <!-- Botão que redireciona para relatorio.html -->
+    <button onclick="location.href='html/relatorio.html'">Ir para Relatório</button>
+
+    <dialog id="dialog-ponto"> 
+        <p class="dialog-data-hora" id="dialog-data">Data: </p>
+        <input type="date" name="data" id="dialog-data-input" class="not-visible">
+        <button class="btn-edit" id="btn-edit-data">Editar</button>
+        <br>
+        <p class="dialog-data-hora" id="dialog-hora">Hora: </p>
+        <input type="time" name="hora" id="dialog-hora-input" class="not-visible">
+        <button class="btn-edit" id="btn-edit-hora">Editar</button>
+
+        <select name="tipo" id="select-dialog-tipo">
+            <option value="entrada">Entrada</option>
+            <option value="intervalo">Intervalo</option>
+            <option value="volta-intervalo">Volta Intervalo</option>
+            <option value="saída">Saída</option>
+        </select>
+
+        <!-- <p class="adicional">Adicionar OBS:</p>
+        <p class="adicional">Adicionar anexo:</p> -->
+        <label for="obs">Observações:</label>
+        <br>
+        <textarea name="obs" id="box-obs" cols="60" rows="5"></textarea>
+        <label for="file-upload">Anexar arquivo:</label>
+        <br>
+        <input type="file" id="file-upload" />
+        <button id="btn-dialog-registrar">Registrar ponto</button>
+        <p id="dialog-ultimo-ponto"></p>
+        <button id="btn-dialog-fechar">X</button>
+    </dialog>
+
+    <!-- Criar histórico dos últimos n registros -->
+    <!-- Criar footer para alerta -->
+    <script src="js/index.js"></script>
+</body>
+</html>
